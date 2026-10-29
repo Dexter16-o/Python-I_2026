@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# # WAP to encrypt & decrypt your message using the shift key
+
+# In[4]:
+
+
 s=input("Enter String:")
 key=int(input("key="))
 s1=""
@@ -21,6 +29,14 @@ for i in range(part+1):
         msg+=part1[i::part+1]
 print("Decrypted msg:",msg)
 
+
+# # Unit-5 Mutable Data Structures(List,dict,set)
+
+# # List
+
+# In[9]:
+
+
 # list is muatable, ordered and hetrogeneous datatype
 l=[1,2,3,4]
 print(type(l))
@@ -29,11 +45,19 @@ print(l)
 print(list(range(1,11)))
 print(list("Hello"))
 
+
+# In[17]:
+
+
 print("This is my pen".split())
 l1=[]
 print(type(l1))
 l2=eval(input("Enter List:"))
 print(l2)
+
+
+# In[26]:
+
 
 l3=[1,2.5,"asdf",(1,2,3),["a","b","c"],9,89]
 print(l3)
@@ -46,6 +70,10 @@ print(l3[-1:15])
 print(l3[-1:15:-1])
 print(l3)
 
+
+# In[27]:
+
+
 # Looping with list
 l=[10,20,30,40]
 for i in l:
@@ -57,6 +85,10 @@ while i<len(l):
     print(l[i])
     i+=1
 
+
+# In[29]:
+
+
 l1=[[1,2,3],[4,5,6],[7,8,9]]
 
 for i in l1:
@@ -64,21 +96,53 @@ for i in l1:
         print(j,end=" ")
     print()
 
+
+# # Important Functions of list
+
+# # 1.len()
+
+# In[31]:
+
+
 l=[1,2,3,4]
 print(len(l))
+
+
+# # 2.count()
+
+# In[32]:
+
 
 l=[1,2,3,4,2]
 print(l.count(2))
 
+
+# # 3.index()
+
+# In[34]:
+
+
 l=[1,2,3,4,2,2]
 print(l.index(2))
 #print(l.index(12)) if element not available then gives error
+
+
+# # 4.append()
+
+# In[36]:
+
 
 l=[1,2,3,4]
 l.append(99)
 print(l)
 l.append(9)
 print(l)
+
+
+# # 5.insert() - insert as per index no.
+
+# In[39]:
+
 
 l=[1,2,3,4]
 l.insert(3,99)
@@ -87,6 +151,12 @@ l.insert(0,11)
 print(l)
 l.insert(-1,10)
 print(l)
+
+
+# # 6.Extend()
+
+# In[42]:
+
 
 l=[1,2,3,4]
 l.extend(["a","b"])
@@ -97,9 +167,21 @@ l.extend((9,8))
 print(l)
 #l.extend(9) this gives error because int object is not iterable , only iterable objects like string,tuple,list is allow
 
+
+# # 7.remove()
+
+# In[47]:
+
+
 l=[1,2,3,4]
 l.remove(3)
 #l.remove(12) if element is not available then it gives error : not in list
+
+
+# # 8.pop()
+
+# In[45]:
+
 
 l=[1,2,3,4,5]
 l.pop()
@@ -107,15 +189,33 @@ print(l)
 l.pop(2) # 2 is index no.
 print(l)
 
+
+# # 9.clear()
+
+# In[46]:
+
+
 l=[1,2,3,4]
 l.clear()
 print(l)
+
+
+# # 10.reverse()
+
+# In[48]:
+
 
 l=[4,3,2]
 l.reverse()
 print(l)
 # print(l.reverse()) - ans will be None
 #reverse is operation so it will not be direct printed
+
+
+# # 11.sort()
+
+# In[61]:
+
 
 l=[11,2,33,4]
 l.sort()
@@ -125,6 +225,10 @@ print(l)
 # l=["a",1,"c"] 
 # l.sort() - Sorting can not be possible in different datatypes
 # print(l)
+
+
+# In[60]:
+
 
 l=[1,2,3]
 print(l*3)
@@ -138,6 +242,12 @@ print(["dog","cat-1"]<["dog","cat-2"])
 print(1 in l)
 print(5 not in l)
 
+
+# # aliasing & cloning
+
+# In[64]:
+
+
 x=[1,2,3]
 y=x
 print(id(x))
@@ -145,6 +255,10 @@ print(id(y))
 y[1]=99
 print(x)
 print(y)
+
+
+# In[66]:
+
 
 # clonnig 
 # method-1
@@ -160,9 +274,21 @@ z[1]=100
 print(z)
 print(x)
 
+
+# # List comprehension
+
+# In[68]:
+
+
 print([x*x for x in range(1,6)])
 s=[1,2,3,4,5,6]
 print([x for x in s if x%2==0])
+
+
+# # Q.453
+
+# In[69]:
+
 
 # WAP to count no of string where string length is 3 or more and 
 # first and last chars of string are same.
@@ -172,6 +298,12 @@ for i in l:
     if len(i)>=3 and i[0]==i[-1]:
         l1.append(i)
 print(l1)
+
+
+# # Q.454
+
+# In[71]:
+
 
 l=eval(input("Enter List:"))
 print("original list:",l)
@@ -187,5 +319,10 @@ for i in range(len(l)):
         c1+=1
         print("after removal of index",i,"list is",l[0:i]+l[i+1:])
 print("no of special elements=",c1)
+
+
+# In[ ]:
+
+
 
 

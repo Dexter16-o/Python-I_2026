@@ -1,10 +1,23 @@
+#!/usr/bin/env python
+# coding: utf-8
+
 # # Indexing
+
+# In[27]:
+
+
 s="Python@123"
 print(s[2])
 print(s[-3])
 # print(s[10]) Gives indext out of range
 # s[2]="x" gives TypeError: 'str' object does not support item assignment
+
+
 # # Slicing
+
+# In[23]:
+
+
 #index  +ve direction left to right (number start will 0)
 #index -ve direction right to left (number start with -1)
 s1="Python is very easy" 
@@ -21,11 +34,23 @@ print(s1[::-1]) #read string from backwards , reverse the string
 print(s1[-1:5]) #No output , stepping must be minus integer for output
 print(s1[-6:-2])
 print(s1[:20]) #will not give index out of bound error
+
+
 # # Mathematical operation(+,=)
+
+# In[28]:
+
+
 a="Python"
 print(a*5)
 print(a+"hello")
+
+
 # # Comparison Operation(>,<,>=,<=)
+
+# In[30]:
+
+
 s1=input("Enter String:")
 s2=input("Enter String:")
 ##string not compare with length ....it compare with ascii value of first letter
@@ -36,7 +61,13 @@ elif s1>s2:
 else:
     print("s2 is greater")
 print(s1>s2)
+
+
 # # Format of String
+
+# In[34]:
+
+
 a=5
 b=10
 print(f"a={a} and b={b}")
@@ -48,12 +79,25 @@ age=26
 print("{}'s salary is {} and his age is {} ".format(name,salary,age))
 print("{0}'s salary is {1} and his age is {2} ".format(name,salary,age))
 print(f"{name}'s salary is {salary} and his age is {age} ")
+
+
 # # Join Function
+
+# In[33]:
+
+
 t=("abs","dfg","gsd")
 s="-".join(t)
 print(s)
+
+
 # # Important Function os string
+
 # # 1. len,strip,rstrip,lstrip
+
+# In[41]:
+
+
 s="  python "
 print(s)
 print(len(s))
@@ -70,14 +114,26 @@ a="banana"
 a=a.strip("a") #strip function will only remove the characters from begin & end can't remove characters between them
 print(a)
 #same we can use with argument function with lstrip & rstrip
+
+
 # # 2. Upper, Lower, Swapcase, title, capitalize
+
+# In[42]:
+
+
 s1="this Is my bag"
 print(s1.upper())
 print(s1.lower())
 print(s1.swapcase())
 print(s1.title())
 print(s1.capitalize())
+
+
 # # 3. Boolean functions (is functions) 
+
+# In[47]:
+
+
 s1="asd123"
 print(s1.isalnum())
 s2="asd"
@@ -94,7 +150,13 @@ print(s5.isspace())
 print("hello hi".isspace())
 print(s1.isidentifier())
 print('a@1'.isidentifier())
+
+
 # # 4. Find, rfind, count, replace, split, enumerate, punctuation(?,"",!)
+
+# In[73]:
+
+
 #return Index no
 s="this is myi bag"
 print(s.find("i"))
@@ -118,18 +180,36 @@ print(s3)
 for i in string.punctuation:
     s3=s3.replace(i,"")
 print("after punctuation:",s3)
+
+
 # # WAP to chek enter string is palindrome or not
+
+# In[48]:
+
+
 n='malayalam'
 m=n[::-1]
 if n==m:
     print("pelindrome")
 else:
     print("not")
+
+
 # # WAP to convert first half string in upper case and 2nd half string in lowe case...
+
+# In[81]:
+
+
 a="Python"
 n=len(a)//2
 print(a[:n].upper()+a[n:].lower())
+
+
 # # WAP tp check weather the entered string is balanced or not
+
+# In[83]:
+
+
 # All Characters of string should be present in s2
 s1=input("Enter String s1:")
 s2=input("Enter String s2:")
@@ -143,7 +223,13 @@ if c>0:
     print("not balanced")
 else:
     print("balanced")
+
+
 # # 4. WAP to count no of uppercase alphabate,lowercase,digits,space and special char
+
+# In[89]:
+
+
 s1=input("Enter String:")
 u=l=d=s=c=a=0
 
@@ -161,4 +247,10 @@ for i in s1:
     else:
         c+=1
 print("Alphabates:",a,"| Uppercase:",u,"| Lowercase:",l,"| Digit:",d,"| Space:",s,"| Special character:",c)
+
+
+# In[ ]:
+
+
+
 

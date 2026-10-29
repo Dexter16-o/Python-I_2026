@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# # Q445
+
+# In[11]:
+
+
 l=["lessonplan","lesson","less","length"]
 if len(l)==0:
     print("nothing")
@@ -18,6 +26,10 @@ if pre=="":
 else:
     print(pre)
 
+
+# In[12]:
+
+
 N = int(input("Enter the size of the matrix (N for N x N): "))
 m = []
 
@@ -35,6 +47,12 @@ for i in range(N):
     m[i].reverse() #reverse the element of rows
 print("Transposed matrix",m)
 
+
+# # Dictionary
+
+# In[15]:
+
+
 # mutable, key-value pair, keys must be unique, duplicate values are allowed
 dict1={"a":20,"b":30,"c":40}
 print(dict1)
@@ -47,11 +65,21 @@ d1["s1"]=10
 print(d)
 print(d1)
 
+
+# In[18]:
+
+
 d1={10:"asd",2:"qwe"}
 print(d1[2])
 # print(d1[20]) if key is not available in dictionary it will return keyerror
 d1[30]="zxc"
 print(d1)
+
+
+# # deleting function
+
+# In[24]:
+
 
 d={10:"asd",2:"zxc",30:"qwe"}
 del d[2]
@@ -61,11 +89,31 @@ print(d)
 # del d --> d is already clear so there is nothing to delete anymore
 # print(d)
 
+
+# # Functions of dictionary
+
+# # 1.len()
+
+# In[26]:
+
+
 d={10:"asd",2:"zxc",30:"qwe"}
 print(len(d))
 
+
+# # 2.dict()
+
+# In[29]:
+
+
 d=dict([(10,"asd"),(2,"zxc"),(30,"qwe")])
 print(d1)
+
+
+# # 3.copy()
+
+# In[33]:
+
 
 d={10:"asd",2:"zxc",30:"qwe"}
 d2=d
@@ -79,10 +127,22 @@ d2[2]="hello"
 print(d2)
 print(d)
 
+
+# # 4.update()
+
+# In[35]:
+
+
 d={10:"asd",2:"zxc",30:"qwe"}
 x={"a":10,'b':20}
 d.update(x)
 print(d)
+
+
+# # 5.get()
+
+# In[42]:
+
 
 d={10:"asd",2:"zxc",30:"qwe"}
 print(d.get(10))
@@ -92,22 +152,52 @@ print(d.get(40,"hello"))
 print(d.get(40))
 print(d)
 
+
+# # 6.popitem()
+
+# In[46]:
+
+
 d={10:"asd",2:"zxc",30:"qwe"}
 print(d.popitem()) #delete and returns last elment as tuple form
 print(d)
+
+
+# # 7.keys()
+
+# In[48]:
+
 
 d={10:"asd",2:"zxc",30:"qwe"}
 print(d.keys())
 for i in d.keys():
     print(i)
 
+
+# # 8.values()
+
+# In[50]:
+
+
 d={10:"asd",2:"zxc",30:"qwe"}
 print(d.values())
+
+
+# # 9.items()
+
+# In[53]:
+
 
 d={10:"asd",2:"zxc",30:"qwe"}
 print(d.items())
 for i,j in d.items():   #To access elements of dictionary
     print(i,"-",j)
+
+
+# # 10.setdefault()
+
+# In[55]:
+
 
 d={10:"asd",2:"zxc",30:"qwe"}
 d.setdefault(40,"hello") #add key to dictionary
@@ -115,18 +205,30 @@ print(d)
 d.setdefault(30,"poi") # if already key available then it will not change
 print(d)
 
+
+# # 11.dictionary comprehension
+
+# In[57]:
+
+
 print({x:x**2 for x in range(1,6)})
+
+
+# # Q451
+
+# In[61]:
+
 
 def count_word_frequency(paragraph):
     # Convert the paragraph to lowercase to make the count case-insensitive
     cleaned_paragraph = paragraph.lower()
-    
+
     # Split the paragraph into individual words based on spaces
     words = cleaned_paragraph.split()
-    
+
     # Initialize an empty dictionary to store frequencies
     freq_dict = {}
-    
+
     # Loop through each word in the list
     for word in words:
         # If the word is already in the dictionary, increment its count
@@ -135,7 +237,7 @@ def count_word_frequency(paragraph):
         # If the word is not in the dictionary, add it with a count of 1
         else:
             freq_dict[word] = 1
-            
+
     return freq_dict
 
 input_string = input("Enter string:")
@@ -144,28 +246,37 @@ output = count_word_frequency(input_string)
 print("Output:", output)
 
 
+# # Q455
+
+# In[62]:
+
+
 def group_words_by_first_char(text):
     # Split the sentence into individual words by whitespace
     words = text.split()
-    
+
     result_dict = {}
-    
+
     for word in words:
         # Get the first character of the word
         first_char_key = word[0]
-        
+
         # Append the word to the list corresponding to its first character
         if first_char_key in result_dict:
             result_dict[first_char_key].append(word)
         else:
             result_dict[first_char_key] = [word]    
-        
+
     return result_dict
 
 input_text = "Don’t wait for your feelings to change to take the action. Take the action and your feelings will change"
 output_dict = group_words_by_first_char(input_text)
 
 print(output_dict)
+
+
+# In[64]:
+
 
  # WAP to convert decimal no. from 0-999 in to word
  # eg. input = 367
@@ -192,6 +303,11 @@ def int_to_word(n):
             return d[n//100]+" hundred "+int_to_word(n%100)
 n=int(input("Enter Number:"))
 print(int_to_word(n))
-    
+
+
+
+# In[ ]:
+
+
 
 

@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# # Q457
+
+# In[2]:
+
+
 l=[1,13,2,3,4]
 s=0
 i=0
@@ -9,6 +17,12 @@ while i<len(l):
         s=s+l[i]
         i+=1
 print(s)
+
+
+# # Q459
+
+# In[12]:
+
 
 #Method-I
 n=int(input("Enter Size of List:"))
@@ -30,6 +44,10 @@ for i in range(1,n):
 
 print("New List:",l)
 
+
+# In[10]:
+
+
 #Method-II
 n=int(input("Enter Size of List:"))
 l=[]
@@ -49,6 +67,10 @@ while left<right:
     right=right-1
 print("New list:",l)
 
+
+# In[15]:
+
+
 #Method-III
 l=[2,4,6,8,10]
 
@@ -57,6 +79,10 @@ for i in range(1,len(l)):
         a=l.pop()
         l.insert(i,a)
 print(l)
+
+
+# In[26]:
+
 
 # 
 """ A company has decided to give gift to each employee. A company has given rank to each employee.
@@ -76,19 +102,25 @@ print("Original List:",l)
 
 # Rule 1: Each employee must receive at least 1 gift
 gifts = [1] * n
-    
+
 # Rule 2 (Left Neighbour): Scan from left to right
 for i in range(1, n):
     if l[i] > l[i - 1]:
         gifts[i] = gifts[i - 1] + 1
-            
+
 # Rule 2 (Right Neighbour): Scan from right to left
 for i in range(n - 2, -1, -1):
     if l[i] > l[i + 1]:
         # Keep the maximum to satisfy both left and right neighbour conditions
         gifts[i] = max(gifts[i], gifts[i + 1] + 1)
-        
+
 print("Min. required gifts: ",sum(gifts))
+
+
+# # WAP to convert int to roman no.
+
+# In[5]:
+
 
 #
 """ 
@@ -108,6 +140,12 @@ while n>0:
     i+=1
 print("Roman No.:",Roman)
 
+
+# # WAP to convert Roman to int
+
+# In[3]:
+
+
 #Method-I
 roman = input("Enter Roman Number:")
 val = [1000,900,500,400,100,90,50,40,10,9,5,4,1]
@@ -124,6 +162,10 @@ while len(roman) > 0:
 
 print("Integer No.:", num)
 
+
+# In[6]:
+
+
 #Method-II
 s=input("Enter roman")
 val=[1000,900,500,400,100,90,50,40,10,9,5,4,1]
@@ -139,11 +181,17 @@ while i<len(s):
         b=symbol.index(s[i:i+1])
         n+=val[b]
 print(n)
-        
+
+
+
+# # Q460
+
+# In[27]:
+
 
 def analyze_string(user_input):
     vowels = set("aeiouAEIOU")
-    
+
     # 1) Reverse each word but keep word order
     reversed_words = " ".join([word[::-1] for word in user_input.split()])
     print("1) String with each word reversed:")
@@ -189,10 +237,16 @@ def analyze_string(user_input):
 user_input = input("Enter a string: ")
 analyze_string(user_input)
 
+
+# # Q461
+
+# In[28]:
+
+
 def is_valid(s: str) -> bool:
     stack = []
     bracket_map = {')': '(', '}': '{', ']': '['}
-    
+
     for ch in s:
         if ch in bracket_map.values():  # opening bracket
             stack.append(ch)
@@ -203,7 +257,7 @@ def is_valid(s: str) -> bool:
         else:
             # invalid character (not required here, but safe check)
             return False
-    
+
     return not stack
 
 
@@ -218,5 +272,10 @@ test_cases = [
 
 for s in test_cases:
     print(f"Input: {s} -> {'Valid' if is_valid(s) else 'Invalid'}")
+
+
+# In[ ]:
+
+
 
 
